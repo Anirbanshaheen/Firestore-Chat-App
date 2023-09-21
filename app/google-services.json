@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "860628539372",
+    "project_id": "firestorechatapp-49fd2",
+    "storage_bucket": "firestorechatapp-49fd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860628539372:android:19bbdeb1d6785dfd2e92c9",
+        "android_client_info": {
+          "package_name": "com.example.firestorechatapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyKCgP1n98eS9qrAcVeIHxQXnpezILLIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
