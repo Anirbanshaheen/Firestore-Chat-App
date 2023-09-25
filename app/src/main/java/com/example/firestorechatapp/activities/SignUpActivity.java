@@ -1,4 +1,4 @@
-package com.example.firestorechatapp.activites;
+package com.example.firestorechatapp.activities;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -9,14 +9,12 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.PatternMatcher;
 import android.provider.MediaStore;
 import android.util.Base64;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.firestorechatapp.R;
 import com.example.firestorechatapp.databinding.ActivitySignUpBinding;
 import com.example.firestorechatapp.utils.Constants;
 import com.example.firestorechatapp.utils.PreferenceManger;
@@ -26,7 +24,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.HashMap;
-import java.util.Objects;
 
 public class SignUpActivity extends AppCompatActivity {
 

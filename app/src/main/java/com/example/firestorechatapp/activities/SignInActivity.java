@@ -1,4 +1,4 @@
-package com.example.firestorechatapp.activites;
+package com.example.firestorechatapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,6 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.firestorechatapp.R;
 import com.example.firestorechatapp.databinding.ActivitySignInBinding;
 import com.example.firestorechatapp.utils.Constants;
 import com.example.firestorechatapp.utils.PreferenceManger;

@@ -1,4 +1,4 @@
-package com.example.firestorechatapp.activites;
+package com.example.firestorechatapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,10 +7,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Base64;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.example.firestorechatapp.R;
 import com.example.firestorechatapp.databinding.ActivityMainBinding;
 import com.example.firestorechatapp.utils.Constants;
 import com.example.firestorechatapp.utils.PreferenceManger;
@@ -41,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         binding.imageSignOut.setOnClickListener(view -> {
             signOut();
         });
+        binding.fabNewChat.setOnClickListener(view -> {
+            startActivity(new Intent(getApplicationContext(), UserActivity.class));
+        });
     }
 
     private void loadUserDetails() {
@@ -69,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
                 .addOnSuccessListener(unused -> {
-                    showToast("Token updated successfully");
+                    //showToast("Token updated successfully");
                 })
                 .addOnFailureListener(e -> {
                     showToast("Failed to update token");
