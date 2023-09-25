@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.widget.Toast;
 
+import com.example.firestorechatapp.activities.user.UserActivity;
 import com.example.firestorechatapp.databinding.ActivityMainBinding;
 import com.example.firestorechatapp.utils.Constants;
 import com.example.firestorechatapp.utils.PreferenceManger;

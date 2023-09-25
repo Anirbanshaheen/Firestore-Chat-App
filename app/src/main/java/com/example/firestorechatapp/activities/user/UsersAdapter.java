@@ -1,4 +1,4 @@
-package com.example.firestorechatapp.activities;
+package com.example.firestorechatapp.activities.user;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firestorechatapp.databinding.ItemContainerUserBinding;
+import com.example.firestorechatapp.listeners.UserListener;
 import com.example.firestorechatapp.models.User;
 
 import java.util.List;
@@ -17,9 +18,11 @@ import java.util.List;
 public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHolder> {
 
     private final List<User> users;
+    private final UserListener userListener;
 
-    public UsersAdapter(List<User> users) {
+    public UsersAdapter(List<User> users, UserListener userListener) {
         this.users = users;
+        this.userListener = userListener;
     }
 
     @NonNull
@@ -56,6 +59,9 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.UserViewHold
             binding.textName.setText(userData.name);
             binding.textEmail.setText(userData.email);
             binding.imageProfile.setImageBitmap(getUserImage(userData.image));
+            binding.getRoot().setOnClickListener(view -> {
+                userListener.onUserClicked(userData);
+            });
         }
     }
 
