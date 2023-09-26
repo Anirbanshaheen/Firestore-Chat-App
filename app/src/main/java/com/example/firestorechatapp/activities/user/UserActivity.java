@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.firestorechatapp.activities.ChatActivity;
+import com.example.firestorechatapp.activities.chat.ChatActivity;
 import com.example.firestorechatapp.databinding.ActivityUserBinding;
 import com.example.firestorechatapp.listeners.UserListener;
 import com.example.firestorechatapp.models.User;
@@ -56,6 +56,7 @@ public class UserActivity extends AppCompatActivity implements UserListener {
                     user.email = queryDocumentSnapshot.getString(Constants.KEY_EMAIL);
                     user.image = queryDocumentSnapshot.getString(Constants.KEY_IMAGE);
                     user.token = queryDocumentSnapshot.getString(Constants.KEY_FCM_TOKEN);
+                    user.id = queryDocumentSnapshot.getId();
                     users.add(user);
                 }
                 if (users.size() > 0) {
